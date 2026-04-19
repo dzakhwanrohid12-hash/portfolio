@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { MapPin, Mail, Phone, Calendar } from "lucide-react"
-import type { Profile, Stat, Skill } from "@/lib/types"
+import { motion } from "framer-motion";
+import { MapPin, Mail, Phone, Calendar } from "lucide-react";
+import type { Profile, Stat, Skill } from "@/lib/types";
 
 interface AboutContentProps {
-  profile: Profile | null
-  stats: Stat[]
-  skills: Skill[]
+  profile: Profile | null;
+  stats: Stat[];
+  skills: Skill[];
 }
 
 export function AboutContent({ profile, stats, skills }: AboutContentProps) {
@@ -25,7 +25,8 @@ export function AboutContent({ profile, stats, skills }: AboutContentProps) {
             ABOUT ME
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            {profile?.bio || "A talented freelance designer & developer, known for creative prowess and technical expertise."}
+            {profile?.bio ||
+              "A talented freelance designer & developer, known for creative prowess and technical expertise."}
           </p>
         </motion.div>
 
@@ -38,7 +39,7 @@ export function AboutContent({ profile, stats, skills }: AboutContentProps) {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-secondary"
           >
-            <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=640')] bg-cover bg-center grayscale" />
+            <div className="absolute inset-0 bg-[url('/about.png')] bg-cover bg-center grayscale" />
           </motion.div>
 
           {/* Right - Details */}
@@ -94,8 +95,13 @@ export function AboutContent({ profile, stats, skills }: AboutContentProps) {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
               {stats.map((stat) => (
-                <div key={stat.id} className="text-center p-4 border border-border rounded-xl">
-                  <div className="text-2xl font-heading font-bold">{stat.value}</div>
+                <div
+                  key={stat.id}
+                  className="text-center p-4 border border-border rounded-xl"
+                >
+                  <div className="text-2xl font-heading font-bold">
+                    {stat.value}
+                  </div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">
                     {stat.label}
                   </div>
@@ -112,7 +118,9 @@ export function AboutContent({ profile, stats, skills }: AboutContentProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-heading font-bold mb-12">MY EXPERTISE</h2>
+          <h2 className="text-3xl font-heading font-bold mb-12">
+            MY EXPERTISE
+          </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, index) => (
               <motion.div
@@ -125,9 +133,11 @@ export function AboutContent({ profile, stats, skills }: AboutContentProps) {
                 className="p-6 border border-border rounded-2xl hover:border-foreground/20 transition-all"
               >
                 <div className="text-sm text-muted-foreground mb-2">
-                  {String(index + 1).padStart(2, '0')}
+                  {String(index + 1).padStart(2, "0")}
                 </div>
-                <h3 className="text-xl font-heading font-semibold mb-2">{skill.name}</h3>
+                <h3 className="text-xl font-heading font-semibold mb-2">
+                  {skill.name}
+                </h3>
                 <p className="text-sm text-muted-foreground">
                   {skill.description || "Professional expertise in this area."}
                 </p>
@@ -137,5 +147,5 @@ export function AboutContent({ profile, stats, skills }: AboutContentProps) {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }

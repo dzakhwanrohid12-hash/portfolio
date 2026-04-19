@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ArrowDown } from "lucide-react"
-import type { Profile, Skill } from "@/lib/types"
+import { motion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
+import type { Profile, Skill } from "@/lib/types";
 
 interface HeroSectionProps {
-  profile: Profile | null
-  skills: Skill[]
+  profile: Profile | null;
+  skills: Skill[];
 }
 
 export function HeroSection({ profile, skills }: HeroSectionProps) {
   const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
-  }
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden pt-20">
@@ -57,7 +57,8 @@ export function HeroSection({ profile, skills }: HeroSectionProps) {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="text-muted-foreground max-w-md text-lg"
             >
-              {profile?.tagline || "I am passionate about creating websites that stand out from the crowd."}
+              {profile?.tagline ||
+                "I am passionate about creating websites that stand out from the crowd."}
             </motion.p>
           </div>
 
@@ -72,7 +73,7 @@ export function HeroSection({ profile, skills }: HeroSectionProps) {
               {/* Profile Image Placeholder */}
               <div className="relative mx-auto w-full max-w-md aspect-[3/4] overflow-hidden rounded-3xl bg-gradient-to-b from-secondary to-muted">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-full h-full bg-[url('/placeholder.svg?height=600&width=450')] bg-cover bg-center grayscale" />
+                  <div className="w-full h-full bg-[url('/profil.jpg')] bg-cover bg-center grayscale" />
                 </div>
               </div>
 
@@ -104,5 +105,5 @@ export function HeroSection({ profile, skills }: HeroSectionProps) {
       <div className="absolute top-1/4 left-0 w-64 h-64 bg-secondary/50 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/30 rounded-full blur-3xl -z-10" />
     </section>
-  )
+  );
 }
