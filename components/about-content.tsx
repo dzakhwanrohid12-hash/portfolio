@@ -39,7 +39,7 @@ export function AboutContent({ profile, stats, skills }: AboutContentProps) {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-secondary"
           >
-            <div className="absolute inset-0 bg-[url('/about.png')] bg-cover bg-center grayscale" />
+            <div className="absolute inset-0 bg-[url('/about.jpg')] bg-cover bg-center grayscale" />
           </motion.div>
 
           {/* Right - Details */}
