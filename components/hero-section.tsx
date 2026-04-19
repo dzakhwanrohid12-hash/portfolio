@@ -73,7 +73,7 @@ export function HeroSection({ profile, skills }: HeroSectionProps) {
               {/* Profile Image Placeholder */}
               <div className="relative mx-auto w-full max-w-md aspect-[3/4] overflow-hidden rounded-3xl bg-gradient-to-b from-secondary to-muted">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-full h-full bg-[url('/profil.png')] bg-cover bg-center grayscale" />
+                  <div className="w-full h-full bg-[url('/profil.jpg')] bg-cover bg-center grayscale" />
                 </div>
               </div>
 
