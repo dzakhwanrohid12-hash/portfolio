@@ -144,7 +144,7 @@ export function Navbar() {
                 className="flex items-center gap-4 mt-10"
               >
                 <a
-                  href="#"
+                  href="https://www.instagram.com/dzakhwan_rohid/"
                   className="p-3 rounded-full border border-border hover:bg-secondary transition-colors"
                 >
                   <Instagram className="w-5 h-5" />
@@ -156,7 +156,7 @@ export function Navbar() {
                   <Dribbble className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/dzakhwan-rohid-hawarri-3320053b6/"
                   className="p-3 rounded-full border border-border hover:bg-secondary transition-colors"
                 >
                   <Linkedin className="w-5 h-5" />
